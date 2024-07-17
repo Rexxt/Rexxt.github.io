@@ -4,12 +4,22 @@
     src: url('fonts/Gilroy-Bold.ttf'); /* IE9 Compat Modes  */
 }
 
+:root { /* changing colour palettes, blue is the default */
+    --background: #def1ff;
+    --header-links: #e3f7ff;
+    --header-links-visited: #bcd3ff;
+    --links: #00a3ff;
+    --links-visited: #00669f;
+    --tab-hover: #2e79a5;
+}
+
 body {
-    background-color: #e9f1f7;
+    background-color: var(--background);
+    margin: 0;
 }
 
 .topnav {
-    background-color: rgba(51, 51, 51, 0.1);
+    background-color: rgba(50, 50, 50, 0.1);
     padding: 10px;
     overflow: hidden;
     display: flex;
@@ -38,7 +48,7 @@ body {
 }
 
 .header a:visited {
-    color: rgb(188, 211, 255);
+    color: var(--header-links-visited);
 }
 
 .contents {
@@ -102,7 +112,7 @@ h1 {
 p, li {
     font-family: 'Inter';
     font-weight: 300;
-    color: #646464;
+    color: #00000085;
     text-align: justify;
 }
 
@@ -118,12 +128,12 @@ p, li {
 a {
     font-family: 'Poppins';
     font-weight: 300;
-    color: #00a3ff;
+    color: var(--links);
     text-align: center;
 }
 
 a.side-link {
-    color: #e3f7ff;
+    color: var(--header-links);
     text-align: center;
 }
 
@@ -132,7 +142,7 @@ a.friend {
 }
 
 a:visited {
-    color: #646464;
+    color: var(--links-visited);
 }
 
 a.tab {
@@ -145,7 +155,7 @@ a.tab {
 }
 
 a.tab:hover {
-    color: #2e79a5;
+    color: var(--tab-hover);
     text-decoration: underline;
     transition-duration: 0.5s;
 }
@@ -153,7 +163,7 @@ a.tab:hover {
 a.tab-sel {
     font-family: 'Poppins';
     font-weight: 500;
-    color: #00a3ff;
+    color: var(--links);
     text-align: justify;
     text-decoration: underline;
 }
@@ -163,12 +173,15 @@ a.tab-sel {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    font-family: 'Inter';
+    font-weight: 300;
+    color: #00000085;
 }
 
 .friend-pic {
-    width: 50px;
-    height: 50px;
-    display: block;
+    width: 64px;
+    height: 64px;
 }
 
 .friend-pic-set > a {
@@ -187,7 +200,7 @@ a.tab-sel {
     flex-direction: column;
     padding: 15px;
     border-radius: 15px;
-    border-bottom: 2px solid #00a3ff40;
+    border-bottom: 2px solid var(--text-group-outline);
     width: 75%;
     max-width: 1100px;
 }
